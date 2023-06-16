@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .captcha {
+        margin-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .captcha-item {
+        margin-right: 20px;
+      }
+
+      input {
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 20px;
+      }
+
+      button:hover {
+        background-color: #0069d9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="captcha">
+      <div class="captcha-item">
+        <span id="captcha-text"></span>
+      </div>
+      <div class="captcha-item">
+        <input type="text" id="captcha-input" placeholder="Enter captcha" />
+      </div>
+      <button type="button" onclick="generateCaptcha()">
+        Generate Captcha
+      </button>
+      <button type="button" onclick="checkCaptcha()">Check Captcha</button>
+    </div>
+
+    <script>
+      var captcha = "";
+
+      function generateCaptcha() {
+        var captchaNumbers = generateRandomNumbers(3);
+        var captchaWords = generateRandomWords(3);
+        captcha = captchaNumbers.join("") + captchaWords.join("");
+        document.getElementById("captcha-text").innerHTML = captcha;
+      }
+
+      function generateRandomNumbers(length) {
+        var numbers = [];
+        for (var i = 0; i < length; i++) {
+          var random = Math.floor(Math.random() * 10);
+          numbers.push(random);
+        }
+        return numbers;
+      }
+
+      function generateRandomWords(length) {
+        var words = [];
+        var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-*/?@!$#%&";
+        for (var i = 0; i < length; i++) {
+          var random = Math.floor(Math.random() * characters.length);
+          var character = characters.charAt(random);
+          words.push(character);
+        }
+        return words;
+      }
+
+      function checkCaptcha() {
+        var userInput = document.getElementById("captcha-input").value;
+        if (userInput == captcha) {
+          alert("Captcha matched!");
+        } else {
+          alert("Captcha does not match, please try again.");
+        }
+      }
+    </script>
+  </body>
+</html>

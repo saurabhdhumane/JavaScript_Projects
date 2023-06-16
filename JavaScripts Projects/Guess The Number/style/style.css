@@ -1,0 +1,86 @@
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    background-image: url("/starfall-gif-46.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    user-select: none;
+    height: 90vh;
+}
+
+.Container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 55px;
+    background-image: url("/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    opacity: 0.5;
+    /* height: 60vh; */
+}
+
+main {
+    font-weight: bolder;
+    margin-top: 90px;
+    padding: 30px;
+    opacity: 1;
+    /* height: 50vh; */
+}
+
+.heading-1 {
+    padding: 10px;
+    text-align: center;
+}
+
+.heading-6 {
+    margin-top: 55px;
+    text-align: center;
+}
+
+#button {
+    padding: 55px;
+    text-align: end;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    text-decoration: solid;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+button:hover {
+    background-color: green;
+    color: wheat;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#Game-start {
+    /* position: absolute; */
+    margin-top: 40%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+footer{
+    text-align: center;
+}  
+a{
+    color: white;
+}
