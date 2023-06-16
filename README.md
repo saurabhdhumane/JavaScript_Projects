@@ -17,7 +17,7 @@ Welcome to the JavaScript Project Collection repository! This repository contain
      <b>   8. Note App - </b>Create, edit, and store textual notes.
      <b>   9. Quiz App -</b> Interactive quiz game with multiple-choice questions.
       <b>  10. Random Color Picker - </b>Generate random colors with options for customization.
-      <b>  11. Random Paragraph Generator -/b> Generate random paragraphs of text.
+      <b>  11. Random Paragraph Generator -</b> Generate random paragraphs of text.
       <b>  12. Random Password Generator -</b> Generate secure and customizable random passwords.
       <b>  13. Random Quote Generation - </b>Display random quotes with a refresh option.
       <b>  14. To-Do List - </b>Create and manage a list of tasks.
